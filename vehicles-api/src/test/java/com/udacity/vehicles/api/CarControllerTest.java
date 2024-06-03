@@ -137,7 +137,7 @@ public class CarControllerTest {
          *   should utilize the car from `getCar()` below.
          */
         Car car = getCar();
-        mvc.perform(get("/cars/{i}", car.getId()))
+        mvc.perform(delete("/cars/{i}", car.getId()))
                 .andExpect(status().isNoContent());
     }
 
